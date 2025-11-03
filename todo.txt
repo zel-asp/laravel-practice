@@ -1,2 +1,7 @@
-run this to make sure that the route and artisan will refresh evrytime 
-while ($true) { Get-ChildItem -Recurse -Filter *.php -Path routes,resources\views | Select-Object -ExpandProperty LastWriteTime | Sort-Object | Select-Object -Last 1; Start-Sleep -Seconds 1; php artisan route:clear; php artisan view:clear; Start-Sleep -Seconds 2 }
+Day 8
+- Learned about arrow function, fn()=>
+- Learned about Arr class specifically the static method 'first', Arr::first($arr, $function)
+- Learned about wildcards or placeholder job/{id}, the {} which laravel automatically know that it will contain a value
+- Created Job class in Model folder
+
+
