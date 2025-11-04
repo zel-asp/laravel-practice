@@ -1,4 +1,19 @@
-Day 8
+Day 1
+- Learned how to install laravel and create laravel app
+- fix the .env db credentials
+
+Day 2
+- Learned what is blade and some shortcuts syntax like {{}} is use to echo
+- Created a blade file
+- Learned about $slot variable 
+
+Day 3
+- Learned about component which make the project more dynamic
+- Learned about customize tags on how to use the blade files in component folder, <x-//file name in component folder>
+- Learned a little about @props blade method, example: @props([active=>false]) 
+- @props will ignore and not show the attributes, example in view component I have <
+
+Day 4
 - Learned about arrow function, fn()=>
 - Learned about Arr class specifically the static method 'first', Arr::first($arr, $function)
 - Learned about wildcards or placeholder job/{id}, the {} which laravel automatically know that it will contain a value
