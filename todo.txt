@@ -11,12 +11,32 @@ Day 3
 - Learned about component which make the project more dynamic
 - Learned about customize tags on how to use the blade files in component folder, <x-//file name in component folder>
 - Learned a little about @props blade method, example: @props([active=>false]) 
-- @props will ignore and not show the attributes, example in view component I have <
+- @props() declares variables that can be passed to the component from another file.
 
 Day 4
 - Learned about arrow function, fn()=>
 - Learned about Arr class specifically the static method 'first', Arr::first($arr, $function)
 - Learned about wildcards or placeholder job/{id}, the {} which laravel automatically know that it will contain a value
 - Created Job class in Model folder
+
+Day 5
+- Learned about vite and postcss, vite is frontend tool that allow your site to refrest automatically, compress or minify css and js and many more. While PostCss is a css processor(it process css and translate it automatically so older versions of browser can understand new systax of css, example is -webkit-)
+- vite use 'npm run dev' to start it and 'npm run build' to minify or compress your css and js files
+
+Day 6
+- Learned about the database migration folder and files
+- Learned about 'artisan migrate' which transfer only the new created table into existing table in db, 'artisan migrate:fresh' refresh and transfer all the created table including the defaults into your db. Use 'php artisan' to see all the commands
+- Learned about Eloquent, it is a ORM(object relational mapper) where it automatically connect to your db, and instead of sql query you can use php systax to query specific table in your db
+- Learned that you classname located in 'app/Model/', when use Eloquent it will automatically connect to its corresponding table name in your db, so if you have User.php -> connect to user table
+- Learned that if you have customize table name that is not part of the defaults tables and want to use it inside a class of default name of table such as; User, Job, you have to declare it as 'protected $table //your customize table name'  
+
+Day 7
+- Learned about 'artisan tinker', it is like a playground that allows you to run programs in terminal without putting the code into your project
+- Learned about 'artisan make:model //the name //additional file if you want like -m for migration' 
+- Learned about property '$fillable = [//specific column that needs to manipulate];', declare it inside the class.
+- Learned how to query using Eloquent api:
+    - ::find(//specific id or identify in db)
+    - ::create([]) = INSERT INTO
+    - ::where([])->delete() = DELETE FROM WHERE
 
 
