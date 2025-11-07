@@ -1,18 +1,22 @@
+INSTALLING AND DB CONFIGURATION
 Day 1
 - Learned how to install laravel and create laravel app
 - fix the .env db credentials
 
+BLADE SYNTAX
 Day 2
 - Learned what is blade and some shortcuts syntax like {{}} is use to echo
 - Created a blade file
 - Learned about $slot variable 
 
+COMPONENT AND PROPS
 Day 3
 - Learned about component which make the project more dynamic
 - Learned about customize tags on how to use the blade files in component folder, <x-//file name in component folder>
 - Learned a little about @props blade method, example: @props([active=>false]) 
 - @props() declares variables that can be passed to the component from another file.
 
+MODEL AND ARR CLASS
 Day 4
 - Learned about Model, these are classes that represents data, it handles data and interacts with db, these data then can use in controller to manipulate or create logic on how it will display in view
 - the 'use Illuminate\Database\Eloquent\Model' is what makes the class connect automatically to your db and use varous methods
@@ -21,10 +25,12 @@ Day 4
 - Learned about wildcards or placeholder job/{id}, the {} which laravel automatically know that it will contain a value
 - Created Job class in Model folder
 
+VITE AND POSTCSS
 Day 5
 - Learned about vite and postcss, vite is frontend tool that allow your site to refrest automatically, compress or minify css and js and many more. While PostCss is a css processor(it process css and translate it automatically so older versions of browser can understand new systax of css, example is -webkit-)
 - vite use 'npm run dev' to start it and 'npm run build' to minify or compress your css and js files
 
+MIGRATION AND MODEL CLASS NAMES
 Day 6
 - Learned about the database migration folder and files, These allows you to creates tables in db and easily migrate it so other devs will not use sql query just 'php artisan migrate'.
 - Learned about 'artisan migrate' which transfer only the new created table into existing table in db, 'artisan migrate:fresh' refresh and transfer all the created table including the defaults into your db. Use 'php artisan' to see all the commands
@@ -33,7 +39,7 @@ Day 6
 - Learned that you classname located in 'app/Model/', when use Eloquent it will automatically connect to its corresponding table name in your db, so if you have User.php -> connect to user table
 - Learned that if you have customize table name that is not part of the defaults tables and want to use it inside a class of default name of table such as; User, Job, you have to declare it as 'protected $table //your customize table name'  
 
-
+TINKER AND ELOQUENT QUERY API
 Day 7
 - Learned about 'artisan tinker', it is like a playground that allows you to run programs in terminal without putting the code into your project
 - Learned about 'artisan make:model //the name //additional file if you want like -m for migration' 
@@ -43,6 +49,7 @@ Day 7
     - ::create([]) = INSERT INTO
     - ::where([])->delete() = DELETE FROM WHERE
 
+FACTORIES
 Day 8
 - Learned about Factory, it is a collection of file classes that allows you to create or assign values to each column. It is used for testing and demo accounts
 - The 'use Illuminate\Database\Eloquent\Factories\HasFactory' and 'use HasFactory' inside the class is used to automatically connect to specific factory and use different methods.
@@ -50,4 +57,10 @@ Day 8
 - learned about factory method called factory
 - learned about ::factory(//can put int)->create(); that will create a dummy or fake data in db
 
-
+ELOQUENT RELATIONSHIP
+Day 9
+- Learned about eloquent relationships, this helps understand the relationships between tables using foreign keys
+- learned about 'hasMany(//the class that has the data)', example a Post(model) has many Comments(model)
+- learned about 'belongsTo(//the class where it belongs)', example Comments(model) belongs to a Post(model)
+- Learned about first() method, where it will get the first data or row in db
+- *Note create custom method that will contains those eloquent methods then when you will call it you dont have to use '()'. Example $job = App\Models\Job::first(), now you can use the method called employer you created that has belongsTo() through-> $job->employer->name
