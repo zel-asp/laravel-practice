@@ -57,10 +57,27 @@ Day 8
 - learned about factory method called factory
 - learned about ::factory(//can put int)->create(); that will create a dummy or fake data in db
 
-ELOQUENT RELATIONSHIP
+BELONGSTO AND HASMANY RELATIONSHIP
 Day 9
 - Learned about eloquent relationships, this helps understand the relationships between tables using foreign keys
 - learned about 'hasMany(//the class that has the data)', example a Post(model) has many Comments(model)
 - learned about 'belongsTo(//the class where it belongs)', example Comments(model) belongs to a Post(model)
 - Learned about first() method, where it will get the first data or row in db
 - *Note create custom method that will contains those eloquent methods then when you will call it you dont have to use '()'. Example $job = App\Models\Job::first(), now you can use the method called employer you created that has belongsTo() through-> $job->employer->name
+
+BELONGS TO MANY RELATIONSHIP
+Day 10
+- learned about eloquent belongsToMany(//the model, table, name of foreign key, name of related foreign key) relationship
+- It is a many-to-many relationship that shows a model(e.g Post) can have various model(e.g Share) and vice versa
+- learned about 'constrained()' and 'cascadeOnDelete()' methods
+- learned that if you dont call a method with (),it will give you a collection no manipulation and with '()' will allow you to manipulate it
+- learned about '->attach(//id)' which will allows you to create relationship
+
+LAZY LOADING
+Day 11
+- Learned about lazy loading. A concept of calling or querying a data only if you call it, example $post = App\Models\Post::find(1); // Only fetches the post
+- Lazy loading can become heavy when loop, since it will query each loop round which create N+1
+- The N+1 problem is a performance issue that happens when your code runs one query for the main data (1) and then one query for each related item (N).
+- Learned about how to disable it through 'App\Providers' folder and under the boot method 'Model::preventLazyLoading();'
+- If you want to use it, use eager loading of 'with(//the relationship method in that particular model)'
+- Downloaded ' helps you to see what's happening behind, you can see it directly on you local server 
