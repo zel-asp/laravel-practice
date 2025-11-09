@@ -8,7 +8,7 @@
         <title>{{ $title ?? 'My app' }}</title>
     </head>
 
-    <body>
+    <body {{ $attributes }}>
         <div class="min-h-full">
             <nav class="bg-gray-800">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -64,17 +64,20 @@
             </nav>
 
             <header class="relative bg-white shadow-sm">
-                <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
+                    <x-button href="/jobs/create">
+                        Create Job
+                    </x-button>
                 </div>
             </header>
+
             <main>
                 <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                     {{ $slot }}
                 </div>
             </main>
         </div>
-
     </body>
 
 </html>

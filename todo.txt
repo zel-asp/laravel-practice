@@ -108,3 +108,21 @@ DAY 13
     - Factories prepare the data
     - Seeders call the creation of thos data
     - Both use in testing phase
+
+FORMS
+DAY 14
+- Learned about Cross-Site Request Forgery(CRSF), where a logged-in user send a request from another website
+- learned about '@crsf' it is a hiiden input can be out inside forms that has values of random string, it then compare the value to current session token
+- learned about '->request()->all()', get all the data submitted through forms
+- learned about "->request('//specific value')", it get specific value base on the name of input field
+- learned about $guarded which is the opposite of $fillable, where it tell what column name should not be given a value
+    - $fillable = [] - columns in db that can assign value stricly
+    - $guarded = [] - columns in db that cannot assign value stricly 
+
+INPUT VALIDATIONS
+DAY 15
+- Learned about server-side validation
+- Learned about 'request()->validat([//rules for each input])'
+- Learned that $errors are always available when using blade
+- Blade directives @error(//name of specific input){}, and inside it you can just echo the $message which will just be availble inside the @error
+- *Note $errors will have a collection of errors, while if you use @error you can have specific error
