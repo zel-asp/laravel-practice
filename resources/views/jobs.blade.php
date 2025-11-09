@@ -1,5 +1,5 @@
 <x-layout title="Jobs" heading="Jobs">
-    <div class="space-y-4">
+    <div class="space-y-4 mb-4">
         @foreach ($jobs as $job)
             <a href="/jobs/{{ $job['id'] }}" class=" block px-4 py-6 border border-gray-400 rounded-lg">
 
@@ -9,5 +9,9 @@
                 </div>
             </a>
         @endforeach
+    </div>
+
+    <div>
+        {{ $jobs->links() }}
     </div>
 </x-layout>

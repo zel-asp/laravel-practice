@@ -80,4 +80,31 @@ Day 11
 - The N+1 problem is a performance issue that happens when your code runs one query for the main data (1) and then one query for each related item (N).
 - Learned about how to disable it through 'App\Providers' folder and under the boot method 'Model::preventLazyLoading();'
 - If you want to use it, use eager loading of 'with(//the relationship method in that particular model)'
-- Downloaded ' helps you to see what's happening behind, you can see it directly on you local server 
+- Downloaded 'laravel-debugger', it helps you to see what's happening behind, you can see it directly on you local server 
+
+PAGINATION
+DAY12
+- Learned about pagination and its methods
+- Learned about how to change the default styling(laravel assumes you use tailwind) using 'php artisan vendor:publish' then select pagination. The vendor will publish to your folders so you can easily change the styling
+- Learned how to change the css used in app/Providers, then import the pagination class then cahnge the default css
+- vendor are the packages that you installed
+- composer is use to install those package, think of it as playstore
+- You can use '->links()' to create pagination (e.g {{ $jobs->links() }})
+- Next in order to show pagination links you have to call these methods(in my case in router when getting the data):
+    -   ->paginate(//how many items should show), this includes the number of pages
+    -   ->simplePaginate(), this will just show previous and next links
+    -   ->cursorPaginate(), this will encrypt the page number in url
+
+DATABASE SEEDERS
+DAY 13
+- Learned about seeders in database folder
+- learned that this is useful for testing and where you call the factory()->create(// can return array of table column and fake data)
+- Learned the artisan methods used to call it:
+    - artisan migrate:fresh --seed, this will drop all table and create it again then populate data
+    - artisan make:seeder, this will create a seeder class file
+    - artisan db:seed, populate the tables in db 
+    - artisan db:seed --class=//name of the class, this will call that specific class and not the root seeder class which is DatabaseSeeder
+- Learned the difference between factories and seeders
+    - Factories prepare the data
+    - Seeders call the creation of thos data
+    - Both use in testing phase
