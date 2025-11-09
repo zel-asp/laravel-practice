@@ -126,3 +126,8 @@ DAY 15
 - Learned that $errors are always available when using blade
 - Blade directives @error(//name of specific input){}, and inside it you can just echo the $message which will just be availble inside the @error
 - *Note $errors will have a collection of errors, while if you use @error you can have specific error
+
+PATCH AND DELETE METHODS
+DAY 16
+- Learned about attribute form='<!-- a name that can be assign in form -->', then in you form you can put that name as an id
+- Learned about @method('//what method, patch, delete etc.')
