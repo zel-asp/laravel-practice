@@ -122,7 +122,7 @@ DAY 14
 INPUT VALIDATIONS
 DAY 15
 - Learned about server-side validation
-- Learned about 'request()->validat([//rules for each input])'
+- Learned about 'request()->validate([//rules for each input])'
 - Learned that $errors are always available when using blade
 - Blade directives @error(//name of specific input){}, and inside it you can just echo the $message which will just be availble inside the @error
 - *Note $errors will have a collection of errors, while if you use @error you can have specific error
