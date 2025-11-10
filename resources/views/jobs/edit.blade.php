@@ -1,5 +1,5 @@
 <x-layout title="Job" heading="Edit Job:{{ $findJob->title }}" class="bg-gray-200 h-full">
-    <form method="POST" action="/jobs/{{ $findJob->id }}/edit">
+    <form method="POST" action="/jobs/{{ $findJob->id }}">
         @csrf
         @method('PATCH')
 
@@ -59,9 +59,9 @@
                 class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
         </div>
     </form>
-    <form action="/jobs/{{ $findJob->id }}/edit" method="POST" id="delete-form">
-        @method('DELETE')
+    <form action="/jobs/{{ $findJob->id }}" method="POST" id="delete-form">
         @csrf
+        @method('DELETE')
     </form>
 
 

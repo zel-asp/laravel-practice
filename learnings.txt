@@ -131,3 +131,20 @@ PATCH AND DELETE METHODS
 DAY 16
 - Learned about attribute form='<!-- a name that can be assign in form -->', then in you form you can put that name as an id
 - Learned about @method('//what method, patch, delete etc.')
+
+ROUTE
+Day 17
+- Learned about ROUTE::view('//the uri', '//the view');
+- Learned about ROUTE::controller(//the controller::class)->group(function(){ //Route::get('//uri', '//method in that class'); })
+- Learned about ROUTE::resource('//name of all uri, e.g jobs', //the controller class, [ '//only or except' => '//the the correstponding hhtp request' ])
+    *Note that in ROUTE::resource it will generate these automatically base of what name you put in uri string e.g you put 'posts':
+
+| HTTP Method | URI                | Controller Method | Action                     | Route Name    |
+| ----------- | ------------------ | ----------------- | -------------------------- | ------------- |
+| GET         | /posts             | index()           | Display all posts          | posts.index   |
+| GET         | /posts/create      | create()          | Show form to create a post | posts.create  |
+| POST        | /posts             | store()           | Save new post              | posts.store   |
+| GET         | /posts/{post}      | show()            | Show a single post         | posts.show    |
+| GET         | /posts/{post}/edit | edit()            | Show form to edit post     | posts.edit    |
+| PUT/PATCH   | /posts/{post}      | update()          | Update post                | posts.update  |
+| DELETE      | /posts/{post}      | destroy()         | Delete post                | posts.destroy |
