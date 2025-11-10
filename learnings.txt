@@ -150,6 +150,6 @@ Day 17
 | PUT/PATCH   | /posts/{post}      | update()          | Update post                | posts.update  |
 | DELETE      | /posts/{post}      | destroy()         | Delete post                | posts.destroy |
 
-
+AUTHENTICATION
 Day 18
 -
