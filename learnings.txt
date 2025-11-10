@@ -152,4 +152,6 @@ Day 17
 
 AUTHENTICATION
 Day 18
--
+- Learned about starter kits where it will create a login and register template automatically, should pick at the start of the project
+- Optimized some html into components and create login and register file, controller, and router
+- Learned new blade directives @auth and @guest, show this if the user is logged in and vice versa 
