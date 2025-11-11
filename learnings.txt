@@ -169,3 +169,4 @@ DAY 19
             ]);
         }
 - Learned how to protech session hijacking using request()->session()->regenerate(), that will create a new seesion token each time a user log in
+*Note always use POST method when clicking logout instead of hyperlink

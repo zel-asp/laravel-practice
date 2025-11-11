@@ -5,7 +5,7 @@
     </p>
 
     <!-- you can use ['id'] -->
-    <x-button href="/jobs/{{ $job->id }}/edit" class="mt-6">
+    <x-link href="/jobs/{{ $job->id }}/edit" class="mt-6">
         Edit Job
-    </x-button>
+    </x-link>
 </x-layout>
