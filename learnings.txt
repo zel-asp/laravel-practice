@@ -155,3 +155,17 @@ Day 18
 - Learned about starter kits where it will create a login and register template automatically, should pick at the start of the project
 - Optimized some html into components and create login and register file, controller, and router
 - Learned new blade directives @auth and @guest, show this if the user is logged in and vice versa 
+
+REGISTER AND LOGIN
+DAY 19 
+- Learned about the 'Auth' class use 'use Illuminate\Support\Facades\Auth', this has methods of:
+    - Auth::login(//the validated data), I used it after registering a user
+    - Auth::logout(), this will destroy user session
+    - attempt(//validated user data or ['//column' => 'requested()']), this will check if the values match in your db. Used in login
+- learned about 'Illuminate\Validation\ValidationException' where it allows you to throw a customize error, example:
+    - if (!Auth::attempt($validatedAttributes)) {
+            throw ValidationException::withMessages([
+                'email' => 'Invalid credentials, Try again'
+            ]);
+        }
+- Learned how to protech session hijacking using request()->session()->regenerate(), that will create a new seesion token each time a user log in
