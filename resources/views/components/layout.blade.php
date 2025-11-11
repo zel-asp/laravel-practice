@@ -33,12 +33,20 @@
                                 </div>
                             </div>
                         </div>
-                        @guest
-                            <div class="hidden md:block">
+                        @auth
+                            <form action="/logout" method="POST">
+                                @csrf
+
                                 <div class="ml-4 flex items-center md:ml-6">
-                                    <x-nav-link href="/register" :active="request()->is('/register')">Register</x-nav-link>
-                                    <x-nav-link href="/login" :active="request()->is('/login')">Login</x-nav-link>
+                                    <x-form-submit-button>Logout</x-form-submit-button>
                                 </div>
+                            </form>
+                        @endauth
+
+                        @guest
+                            <div class="ml-4 flex items-center md:ml-6">
+                                <x-nav-link href="/register" :active="request()->is('/register')">Register</x-nav-link>
+                                <x-nav-link href="/login" :active="request()->is('/login')">Login</x-nav-link>
                             </div>
                         @endguest
                     </div>
@@ -48,9 +56,9 @@
             <header class="relative bg-white shadow-sm">
                 <div class="flex justify-between items-center mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
-                    <x-button href="/jobs/create">
+                    <x-link href="/jobs/create">
                         Create Job
-                    </x-button>
+                    </x-link>
                 </div>
             </header>
 
